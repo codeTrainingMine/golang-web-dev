@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Southern Hotels</h1>
+{{range .Southern}}
+    {{.Name}} - {{.Address}} - {{.City}} - {{.Zip}}
+{{end}}
+<h1>Central Hotels</h1>
+{{range .Central}}
+    {{.Name}} - {{.Address}} - {{.City}} - {{.Zip}}
+{{end}}
+<h1>Northern Hotels</h1>
+{{range .Northern}}
+    {{.Name}} - {{.Address}} - {{.City}} - {{.Zip}}
+{{end}}
+
+</body>
+</html>
