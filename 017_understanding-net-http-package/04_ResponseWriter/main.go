@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"log"
 )
 
 type hotdog int
@@ -15,5 +16,8 @@ func (m hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request)  {
 
 func main()  {
 	var d hotdog
-	http.ListenAndServe(":8080", d)
+	err := http.ListenAndServe(":80", d)
+	if err != nil {
+		log.Fatalln(err)
+	}
 }
