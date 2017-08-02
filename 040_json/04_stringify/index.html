@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    var picture = {
+        "Width": 800,
+        "Height": 500,
+        "Title":  "View from 15th Floor",
+        "Thumbnail": {
+            "Url":    "http://www.example.com/image/481989943",
+            "Height": 125,
+            "Width":  100
+        },
+        "Animated": false,
+        "IDs": [116, 943, 234, 38793]
+    };
+
+    var transmit = JSON.stringify(picture);
+    document.write(transmit);
+
+</script>
+
+</body>
+</html>
