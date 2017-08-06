@@ -3,11 +3,11 @@ package main
 import (
 	"github.com/julienschmidt/httprouter"
 	"net/http"
-	"golang-web-dev/042_mongodb/05_mongodb/01_update-user-controller/controllers"
 	"gopkg.in/mgo.v2"
+	"golang-web-dev/042_mongodb/05_mongodb/05_update-user-controllers-delete/controllers"
 )
 
-func main()  {
+func main() {
 	r := httprouter.New()
 	uc := controllers.NewUserController(getSession())
 	r.GET("/user/:id", uc.GetUser)
@@ -17,10 +17,8 @@ func main()  {
 }
 
 func getSession() *mgo.Session {
-	// Connect to our local mongo
 	s, err := mgo.Dial("mongodb://trash")
 
-	// Check if connection erro, is mongo running?
 	if err != nil {
 		panic(err)
 	}

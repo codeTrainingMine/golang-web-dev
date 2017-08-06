@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/julienschmidt/httprouter"
 	"net/http"
-	"golang-web-dev/042_mongodb/05_mongodb/01_update-user-controller/controllers"
 	"gopkg.in/mgo.v2"
+	"golang-web-dev/042_mongodb/05_mongodb/03_update-user-controllers-post/controllers"
 )
 
 func main()  {
