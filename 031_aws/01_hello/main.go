@@ -2,8 +2,8 @@ package main
 
 import (
 	"net/http"
-	"io"
 	"log"
+	"io"
 )
 
 func main()  {
@@ -12,6 +12,9 @@ func main()  {
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	// the below will serve all files in /home/nir/
+	//log.Fatal(http.ListenAndServe(":8080", http.FileServer(http.Dir("."))))
 }
 
 func index(w http.ResponseWriter, req *http.Request)  {
